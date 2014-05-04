@@ -56,7 +56,7 @@ Please try to move the [sample](https://github.com/hotchemi/ProgressMenuItem/tre
 
 ## Requirements
 
-Supports Android 2.2 or greater.
+Supports Android 1.6 or greater.
 
 ## Contribute
 
