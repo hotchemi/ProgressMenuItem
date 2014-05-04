@@ -21,8 +21,6 @@ Download from maven central.
 
 ## How to use
 
-### Implementation
-
 ProgressMenuItem's usage is very simple.
 
 Simple in your Activity or Fragment's `onCreateOptionsMenu` method instantiate it.
@@ -65,3 +63,12 @@ Supports Android 1.6 or greater.
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## inspired
+
+ProgressMenuItem is inspired by [RefreshMenuItem](https://github.com/nicolasjafelle/RefreshMenuItem).
+
+But ProgressMenuItem has some merits:
+
+- Support 1.6 or grater.
+- API Interface is more simple.
