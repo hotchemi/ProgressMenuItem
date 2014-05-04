@@ -25,18 +25,18 @@ public class ProgressMenuItemHelper {
     }
 
     public void startProgress() {
-        if (isNull(menuItemReference)) {
+        if (isNotNull(menuItemReference)) {
             MenuItemCompat.setActionView(menuItemReference.get(), R.layout.menu_item_progress);
         }
     }
 
     public void stopProgress() {
-        if (isNull(menuItemReference)) {
+        if (isNotNull(menuItemReference)) {
             MenuItemCompat.setActionView(menuItemReference.get(), null);
         }
     }
 
-    private boolean isNull(final SoftReference<MenuItem> menuItemReference) {
+    private static boolean isNotNull(final SoftReference<MenuItem> menuItemReference) {
         return menuItemReference != null && menuItemReference.get() != null;
     }
 
