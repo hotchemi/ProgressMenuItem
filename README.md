@@ -3,7 +3,7 @@ ProgressMenuItem
 
 Shows and stop a progress in the ActionBar.
 
-![gif](http://gifzo.net/BSkzzs0DmY3.gif)
+![gif](http://gifzo.net/BO3wY1zTTkb.gif)
 
 ## Download
 
