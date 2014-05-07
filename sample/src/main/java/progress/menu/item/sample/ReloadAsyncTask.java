@@ -1,6 +1,7 @@
 package progress.menu.item.sample;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import progress.menu.item.ProgressMenuItemHelper;
 
@@ -22,8 +23,8 @@ public class ReloadAsyncTask extends AsyncTask<Void, Void, Void> {
     protected Void doInBackground(Void... params) {
         try {
             Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        } catch (final InterruptedException e) {
+            Log.d(getClass().getCanonicalName(), e.toString());
         }
         return null;
     }
