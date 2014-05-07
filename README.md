@@ -64,7 +64,7 @@ Supports Android 1.6 or greater.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-## inspired
+## Inspired
 
 ProgressMenuItem is inspired by [RefreshMenuItem](https://github.com/nicolasjafelle/RefreshMenuItem).
 
