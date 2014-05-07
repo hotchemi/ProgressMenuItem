@@ -4,6 +4,7 @@ import android.support.v4.view.MenuItemCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.lang.ref.Reference;
 import java.lang.ref.SoftReference;
 
 /**
@@ -11,7 +12,7 @@ import java.lang.ref.SoftReference;
  */
 public class ProgressMenuItemHelper {
 
-    private SoftReference<MenuItem> menuItemReference;
+    private Reference<MenuItem> menuItemReference;
 
     protected ProgressMenuItemHelper() {
     }
@@ -24,6 +25,10 @@ public class ProgressMenuItemHelper {
         menuItemReference = new SoftReference<MenuItem>(menuItem);
     }
 
+    static boolean isNotNull(final Reference<MenuItem> menuItemReference) {
+        return menuItemReference != null && menuItemReference.get() != null;
+    }
+
     public void startProgress() {
         if (isNotNull(menuItemReference)) {
             MenuItemCompat.setActionView(menuItemReference.get(), R.layout.menu_item_progress);
@@ -34,10 +39,6 @@ public class ProgressMenuItemHelper {
         if (isNotNull(menuItemReference)) {
             MenuItemCompat.setActionView(menuItemReference.get(), null);
         }
-    }
-
-    private static boolean isNotNull(final SoftReference<MenuItem> menuItemReference) {
-        return menuItemReference != null && menuItemReference.get() != null;
     }
 
 }
