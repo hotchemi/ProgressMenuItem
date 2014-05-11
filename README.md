@@ -1,6 +1,8 @@
 ProgressMenuItem
 ================
 
+[![Build Status](https://travis-ci.org/hotchemi/ProgressMenuItem.png?branch=master)](https://travis-ci.org/hotchemi/ProgressMenuItem)
+
 Shows and stop a progress in the ActionBar.
 
 ![gif](http://gifzo.net/BO3wY1zTTkb.gif)
