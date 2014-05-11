@@ -18,10 +18,13 @@ Download from maven central.
 ## ChangeLog
 
 - 2014/05/04 0.1.0 release.
+- 2014/05/11 0.2.0 release.
 
 ## How to use
 
 ProgressMenuItem's usage is very simple.
+
+### Initialize
 
 Simple in your Activity or Fragment's `onCreateOptionsMenu` method instantiate it.
 
@@ -38,14 +41,24 @@ public boolean onCreateOptionsMenu(Menu menu) {
 }
 ```
 
-Then simple call:
+### Start Progress
+
 ``` java
 progressHelper.startProgress();
 ```
 
-And:
+### Stop Progress
+
 ``` java
 progressHelper.stopProgress();
+```
+
+### Override progress layout resource
+
+Call 'setResourceId(int resourceId)' and set your coustom layout.
+
+``` java
+progressHelper.setResourceId(R.layout.my_menu_item_progress);
 ```
 
 ## Sample
@@ -70,5 +83,23 @@ ProgressMenuItem is inspired by [RefreshMenuItem](https://github.com/nicolasjafe
 
 But ProgressMenuItem has some merits:
 
-- Support 1.6 or grater.
-- API Interface is more simple.
+- Supports Android 1.6 or greater.
+- ProgressMenuItem's Interface is more simple.
+
+## Licence
+
+```
+ Copyright 2014 Shintaro Katafuchi
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+```

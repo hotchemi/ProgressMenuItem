@@ -7,7 +7,6 @@ import android.view.MenuItem;
 
 import progress.menu.item.ProgressMenuItemHelper;
 
-
 public class MainActivity extends ActionBarActivity {
 
     private ProgressMenuItemHelper progressHelper;

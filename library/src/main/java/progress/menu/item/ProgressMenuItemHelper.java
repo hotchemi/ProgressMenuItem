@@ -7,12 +7,16 @@ import android.view.MenuItem;
 import java.lang.ref.Reference;
 import java.lang.ref.SoftReference;
 
+import static progress.menu.item.ReferenceUtil.isNotNull;
+
 /**
  * Shows and stop a progress in the ActionBar.
  */
 public class ProgressMenuItemHelper {
 
     private Reference<MenuItem> menuItemReference;
+
+    private int resourceId = R.layout.menu_item_progress;
 
     protected ProgressMenuItemHelper() {
     }
@@ -25,13 +29,13 @@ public class ProgressMenuItemHelper {
         menuItemReference = new SoftReference<MenuItem>(menuItem);
     }
 
-    static boolean isNotNull(final Reference<MenuItem> menuItemReference) {
-        return menuItemReference != null && menuItemReference.get() != null;
+    public void setResourceId(int resourceId) {
+        this.resourceId = resourceId;
     }
 
     public void startProgress() {
         if (isNotNull(menuItemReference)) {
-            MenuItemCompat.setActionView(menuItemReference.get(), R.layout.menu_item_progress);
+            MenuItemCompat.setActionView(menuItemReference.get(), resourceId);
         }
     }
 
