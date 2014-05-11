@@ -55,7 +55,7 @@ progressHelper.stopProgress();
 
 ### Override progress layout resource
 
-Call 'setResourceId(int resourceId)' and set your coustom layout.
+Call `setResourceId(int resourceId)` and set your coustom layout.
 
 ``` java
 progressHelper.setResourceId(R.layout.my_menu_item_progress);
