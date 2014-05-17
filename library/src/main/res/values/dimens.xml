@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<dimen name="progress_menu_frame_size">56dp</dimen>
-	<dimen name="progress_menu_item_size">48dp</dimen>
+    <dimen name="progress_menu_item_size">32dp</dimen>
+    <dimen name="progress_menu_item_large_size">48dp</dimen>
+    <dimen name="progress_menu_frame_size">56dp</dimen>
 </resources>

@@ -20,7 +20,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.refresh_menu, menu);
-        progressHelper = new ProgressMenuItemHelper(menu, R.id.action_refresh);
+        progressHelper = new ProgressMenuItemHelper(menu, R.id.action_refresh, true);
         return true;
     }
 

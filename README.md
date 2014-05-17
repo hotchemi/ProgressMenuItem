@@ -12,15 +12,16 @@ Shows and stop a progress in the ActionBar.
 Download from maven central.
 
 ```groovy
-  dependencies {
-    compile 'com.github.hotchemi:ProgressMenuItem:{latest.version}'
-  }
+dependencies {
+  compile 'com.github.hotchemi:ProgressMenuItem:{latest.version}'
+}
 ```
 
 ## ChangeLog
 
 - 2014/05/04 0.1.0 release.
 - 2014/05/11 0.2.0 release.
+- 2014/05/18 0.3.0 release.
 
 ## How to use
 
@@ -43,21 +44,36 @@ public boolean onCreateOptionsMenu(Menu menu) {
 }
 ```
 
-### Start Progress
+### Start progress
 
 ``` java
 progressHelper.startProgress();
 ```
 
-### Stop Progress
+### Stop progress
 
 ``` java
 progressHelper.stopProgress();
 ```
 
-### Override progress layout resource
+### Use large progress
 
-Call `setResourceId(int resourceId)` and set your coustom layout.
+```java
+private ProgressMenuItemHelper progressHelper;
+
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.refresh_menu, menu);
+    progressHelper = new ProgressMenuItemHelper(menu, R.id.action_refresh, true);
+    return true;
+}
+```
+
+![gif](http://gifzo.net/BDXqbzDanWc.gif)
+
+### Override progress
+
+Call `setResourceId(int resourceId)` and set your custom layout.
 
 ``` java
 progressHelper.setResourceId(R.layout.my_menu_item_progress);

@@ -1,16 +1,14 @@
 package progress.menu.item;
 
-import android.view.MenuItem;
-
 import java.lang.ref.Reference;
 
-final class ReferenceUtil {
+final class ReferenceUtils {
 
-    private ReferenceUtil() {
+    private ReferenceUtils() {
     }
 
-    static boolean isNotNull(Reference<MenuItem> reference) {
-        return reference != null && reference.get() != null;
+    static <T> boolean isNotNull(Reference<T> ref) {
+        return ref != null && ref.get() != null;
     }
 
 }
