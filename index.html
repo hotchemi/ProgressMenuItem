@@ -4,35 +4,46 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Progressmenuitem by hotchemi</title>
-
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/hotchemi/ProgressMenuItem">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/hotchemi/ProgressMenuItem/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/hotchemi/ProgressMenuItem/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
     <div class="wrapper">
-      <header>
-        <h1>Progressmenuitem</h1>
-        <p>Shows and stop a progress in the ActionBar.</p>
-        <p class="view"><a href="https://github.com/hotchemi/ProgressMenuItem">View the Project on GitHub <small>hotchemi/ProgressMenuItem</small></a></p>
-        <ul>
-          <li><a href="https://github.com/hotchemi/ProgressMenuItem/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/hotchemi/ProgressMenuItem/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/hotchemi/ProgressMenuItem">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
+
       <section>
+        <div id="title">
+          <h1>Progressmenuitem</h1>
+          <p>Shows and stop a progress in the ActionBar.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/hotchemi">hotchemi</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
         <h1>
 <a name="progressmenuitem" class="anchor" href="#progressmenuitem"><span class="octicon octicon-link"></span></a>ProgressMenuItem</h1>
 
 <p><a href="https://travis-ci.org/hotchemi/ProgressMenuItem"><img src="https://travis-ci.org/hotchemi/ProgressMenuItem.png?branch=master" alt="Build Status"></a></p>
 
-<p>Shows and stop a progress in the ActionBar.</p>
+<p>Helper library about Showing and stopping a progress in the ActionBar.</p>
 
 <p><img src="http://gifzo.net/BO3wY1zTTkb.gif" alt="gif"></p>
 
@@ -50,9 +61,10 @@
 <a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>ChangeLog</h2>
 
 <ul>
-<li>2014/05/04 0.1.0 release.</li>
-<li>2014/05/11 0.2.0 release.</li>
+<li>2014/05/25 0.3.1 release.</li>
 <li>2014/05/18 0.3.0 release.</li>
+<li>2014/05/11 0.2.0 release.</li>
+<li>2014/05/04 0.1.0 release.</li>
 </ul><h2>
 <a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h2>
 
@@ -71,6 +83,8 @@
 <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onCreateOptionsMenu</span><span class="o">(</span><span class="n">Menu</span> <span class="n">menu</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">getMenuInflater</span><span class="o">().</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">menu</span><span class="o">.</span><span class="na">refresh_menu</span><span class="o">,</span> <span class="n">menu</span><span class="o">);</span>
     <span class="n">progressHelper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProgressMenuItemHelper</span><span class="o">(</span><span class="n">menu</span><span class="o">,</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_refresh</span><span class="o">);</span>
+    <span class="c1">// or</span>
+ <span class="c1">// progressHelper = new ProgressMenuItemHelper(menu.findItem(R.id.action_refresh));</span>
     <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
 <span class="o">}</span>
 </pre></div>
@@ -95,7 +109,7 @@
 <span class="nd">@Override</span>
 <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onCreateOptionsMenu</span><span class="o">(</span><span class="n">Menu</span> <span class="n">menu</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">getMenuInflater</span><span class="o">().</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">menu</span><span class="o">.</span><span class="na">refresh_menu</span><span class="o">,</span> <span class="n">menu</span><span class="o">);</span>
-    <span class="n">progressHelper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProgressMenuItemHelper</span><span class="o">(</span><span class="n">menu</span><span class="o">,</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_refresh</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+    <span class="n">progressHelper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProgressMenuItemHelper</span><span class="o">(</span><span class="n">menu</span><span class="o">,</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_refresh</span><span class="o">,</span> <span class="n">ProgressMenuSize</span><span class="o">.</span><span class="na">LARGE</span><span class="o">);</span>
     <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
 <span class="o">}</span>
 </pre></div>
@@ -105,7 +119,7 @@
 <h3>
 <a name="override-progress" class="anchor" href="#override-progress"><span class="octicon octicon-link"></span></a>Override progress</h3>
 
-<p>Call <code>setResourceId(int resourceId)</code> and set your custom layout.</p>
+<p>Call <code>setResourceId(int resId)</code> and set your custom layout.</p>
 
 <div class="highlight highlight-java"><pre><span class="n">progressHelper</span><span class="o">.</span><span class="na">setResourceId</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">my_menu_item_progress</span><span class="o">);</span>
 </pre></div>
@@ -157,11 +171,8 @@
  limitations under the License.
 </code></pre>
       </section>
+
     </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/hotchemi">hotchemi</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
