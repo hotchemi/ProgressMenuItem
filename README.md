@@ -3,7 +3,7 @@ ProgressMenuItem
 
 [![Build Status](https://travis-ci.org/hotchemi/ProgressMenuItem.png?branch=master)](https://travis-ci.org/hotchemi/ProgressMenuItem)
 
-Shows and stop a progress in the ActionBar.
+Helper library about Showing and stopping a progress in the ActionBar.
 
 ![gif](http://gifzo.net/BO3wY1zTTkb.gif)
 
@@ -19,9 +19,10 @@ dependencies {
 
 ## ChangeLog
 
-- 2014/05/04 0.1.0 release.
-- 2014/05/11 0.2.0 release.
+- 2014/05/25 0.3.1 release.
 - 2014/05/18 0.3.0 release.
+- 2014/05/11 0.2.0 release.
+- 2014/05/04 0.1.0 release.
 
 ## How to use
 
@@ -40,6 +41,8 @@ private ProgressMenuItemHelper progressHelper;
 public boolean onCreateOptionsMenu(Menu menu) {
     getMenuInflater().inflate(R.menu.refresh_menu, menu);
     progressHelper = new ProgressMenuItemHelper(menu, R.id.action_refresh);
+    // or
+ // progressHelper = new ProgressMenuItemHelper(menu.findItem(R.id.action_refresh));
     return true;
 }
 ```
@@ -64,7 +67,7 @@ private ProgressMenuItemHelper progressHelper;
 @Override
 public boolean onCreateOptionsMenu(Menu menu) {
     getMenuInflater().inflate(R.menu.refresh_menu, menu);
-    progressHelper = new ProgressMenuItemHelper(menu, R.id.action_refresh, true);
+    progressHelper = new ProgressMenuItemHelper(menu, R.id.action_refresh, ProgressMenuSize.LARGE);
     return true;
 }
 ```
@@ -73,7 +76,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
 
 ### Override progress
 
-Call `setResourceId(int resourceId)` and set your custom layout.
+Call `setResourceId(int resId)` and set your custom layout.
 
 ``` java
 progressHelper.setResourceId(R.layout.my_menu_item_progress);

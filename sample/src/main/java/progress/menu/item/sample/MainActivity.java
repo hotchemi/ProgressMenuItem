@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import progress.menu.item.ProgressMenuItemHelper;
+import progress.menu.item.ProgressMenuItemSize;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -20,7 +21,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.refresh_menu, menu);
-        progressHelper = new ProgressMenuItemHelper(menu, R.id.action_refresh, true);
+        progressHelper = new ProgressMenuItemHelper(menu, R.id.action_refresh, ProgressMenuItemSize.LARGE);
         return true;
     }
 
