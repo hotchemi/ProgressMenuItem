@@ -7,27 +7,21 @@ import android.view.MenuItem;
 import java.lang.ref.Reference;
 import java.lang.ref.SoftReference;
 
-import static progress.menu.item.ReferenceUtils.isNotNull;
-import static progress.menu.item.ProgressMenuItemSize.LARGE;
-
-/**
- * Shows and stop a progress in the ActionBar.
- */
 public class ProgressMenuItemHelper {
 
     private Reference<MenuItem> menuItemReference;
 
-    private int resId = R.layout.menu_item_progress;
+    private int resourceId = R.layout.menu_item_progress;
 
     protected ProgressMenuItemHelper() {
     }
 
-    public ProgressMenuItemHelper(Menu menu, int resId) {
-        this(menu.findItem(resId));
+    public ProgressMenuItemHelper(Menu menu, int resourceId) {
+        this(menu.findItem(resourceId));
     }
 
-    public ProgressMenuItemHelper(Menu menu, int resId, int progressSize) {
-        this(menu.findItem(resId), progressSize);
+    public ProgressMenuItemHelper(Menu menu, int resourceId, int progressSize) {
+        this(menu.findItem(resourceId), progressSize);
     }
 
     public ProgressMenuItemHelper(MenuItem menuItem) {
@@ -36,23 +30,22 @@ public class ProgressMenuItemHelper {
 
     public ProgressMenuItemHelper(MenuItem menuItem, int progressSize) {
         this(menuItem);
-        if (progressSize == LARGE) resId = R.layout.menu_item_progress_large;
+        if (progressSize == ProgressMenuItemSize.LARGE)
+            resourceId = R.layout.menu_item_progress_large;
     }
 
-    public void setResourceId(int resId) {
-        this.resId = resId;
+    public void setResourceId(int resourceId) {
+        this.resourceId = resourceId;
     }
 
     public void startProgress() {
-        if (isNotNull(menuItemReference)) {
-            MenuItemCompat.setActionView(menuItemReference.get(), resId);
-        }
+        if (ReferenceHelper.isNotNull(menuItemReference))
+            MenuItemCompat.setActionView(menuItemReference.get(), resourceId);
     }
 
     public void stopProgress() {
-        if (isNotNull(menuItemReference)) {
+        if (ReferenceHelper.isNotNull(menuItemReference))
             MenuItemCompat.setActionView(menuItemReference.get(), null);
-        }
     }
 
 }

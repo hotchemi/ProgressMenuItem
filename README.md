@@ -13,12 +13,13 @@ Download from maven central.
 
 ```groovy
 dependencies {
-  compile 'com.github.hotchemi:ProgressMenuItem:{latest.version}'
+  compile 'com.github.hotchemi:ProgressMenuItem:0.3.2'
 }
 ```
 
 ## ChangeLog
 
+- 2014/06/22 0.3.2 release.
 - 2014/05/25 0.3.1 release.
 - 2014/05/18 0.3.0 release.
 - 2014/05/11 0.2.0 release.
@@ -42,7 +43,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
     getMenuInflater().inflate(R.menu.refresh_menu, menu);
     progressHelper = new ProgressMenuItemHelper(menu, R.id.action_refresh);
     // or
- // progressHelper = new ProgressMenuItemHelper(menu.findItem(R.id.action_refresh));
+    progressHelper = new ProgressMenuItemHelper(menu.findItem(R.id.action_refresh));
     return true;
 }
 ```
@@ -88,7 +89,7 @@ Please try to move the [sample](https://github.com/hotchemi/ProgressMenuItem/tre
 
 ## Requirements
 
-Supports Android 1.6 or greater.
+Supports Android 2.1 or greater.
 
 ## Contribute
 
@@ -104,7 +105,7 @@ ProgressMenuItem is inspired by [RefreshMenuItem](https://github.com/nicolasjafe
 
 But ProgressMenuItem has some merits:
 
-- Supports Android 1.6 or greater.
+- Supports Android 2.1 or greater.
 - ProgressMenuItem's Interface is more simple.
 
 ## Licence

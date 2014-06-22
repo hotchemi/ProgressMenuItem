@@ -1,10 +1,10 @@
 package progress.menu.item;
 
-public class ProgressMenuItemSize {
+public final class ProgressMenuItemSize {
+
+    public static final int LARGE = 1;
 
     private ProgressMenuItemSize() {
     }
-
-    public static final int LARGE = 1;
 
 }
