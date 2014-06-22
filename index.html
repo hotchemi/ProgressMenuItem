@@ -53,7 +53,7 @@
 <p>Download from maven central.</p>
 
 <div class="highlight highlight-groovy"><pre><span class="n">dependencies</span> <span class="o">{</span>
-  <span class="n">compile</span> <span class="s1">'com.github.hotchemi:ProgressMenuItem:{latest.version}'</span>
+  <span class="n">compile</span> <span class="s1">'com.github.hotchemi:ProgressMenuItem:0.3.2'</span>
 <span class="o">}</span>
 </pre></div>
 
@@ -61,6 +61,7 @@
 <a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>ChangeLog</h2>
 
 <ul>
+<li>2014/06/22 0.3.2 release.</li>
 <li>2014/05/25 0.3.1 release.</li>
 <li>2014/05/18 0.3.0 release.</li>
 <li>2014/05/11 0.2.0 release.</li>
@@ -82,9 +83,9 @@
 <span class="nd">@Override</span>
 <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onCreateOptionsMenu</span><span class="o">(</span><span class="n">Menu</span> <span class="n">menu</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">getMenuInflater</span><span class="o">().</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">menu</span><span class="o">.</span><span class="na">refresh_menu</span><span class="o">,</span> <span class="n">menu</span><span class="o">);</span>
-    <span class="n">progressHelper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProgressMenuItemHelper</span><span class="o">(</span><span class="n">menu</span><span class="o">,</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_refresh</span><span class="o">);</span>
+    <span class="n">progressHelper</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">ProgressMenuItemHelper</span><span class="o">(</span><span class="n">menu</span><span class="o">,</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_refresh</span><span class="o">);</span>
     <span class="c1">// or</span>
- <span class="c1">// progressHelper = new ProgressMenuItemHelper(menu.findItem(R.id.action_refresh));</span>
+    <span class="n">progressHelper</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">ProgressMenuItemHelper</span><span class="o">(</span><span class="n">menu</span><span class="o">.</span><span class="na">findItem</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_refresh</span><span class="o">));</span>
     <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
 <span class="o">}</span>
 </pre></div>
@@ -109,7 +110,7 @@
 <span class="nd">@Override</span>
 <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onCreateOptionsMenu</span><span class="o">(</span><span class="n">Menu</span> <span class="n">menu</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">getMenuInflater</span><span class="o">().</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">menu</span><span class="o">.</span><span class="na">refresh_menu</span><span class="o">,</span> <span class="n">menu</span><span class="o">);</span>
-    <span class="n">progressHelper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ProgressMenuItemHelper</span><span class="o">(</span><span class="n">menu</span><span class="o">,</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_refresh</span><span class="o">,</span> <span class="n">ProgressMenuSize</span><span class="o">.</span><span class="na">LARGE</span><span class="o">);</span>
+    <span class="n">progressHelper</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">ProgressMenuItemHelper</span><span class="o">(</span><span class="n">menu</span><span class="o">,</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_refresh</span><span class="o">,</span> <span class="n">ProgressMenuSize</span><span class="o">.</span><span class="na">LARGE</span><span class="o">);</span>
     <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
 <span class="o">}</span>
 </pre></div>
@@ -132,7 +133,7 @@
 <h2>
 <a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
-<p>Supports Android 1.6 or greater.</p>
+<p>Supports Android 2.1 or greater.</p>
 
 <h2>
 <a name="contribute" class="anchor" href="#contribute"><span class="octicon octicon-link"></span></a>Contribute</h2>
@@ -151,7 +152,7 @@
 <p>But ProgressMenuItem has some merits:</p>
 
 <ul>
-<li>Supports Android 1.6 or greater.</li>
+<li>Supports Android 2.1 or greater.</li>
 <li>ProgressMenuItem's Interface is more simple.</li>
 </ul><h2>
 <a name="licence" class="anchor" href="#licence"><span class="octicon octicon-link"></span></a>Licence</h2>
