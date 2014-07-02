@@ -13,12 +13,13 @@ Download from maven central.
 
 ```groovy
 dependencies {
-  compile 'com.github.hotchemi:ProgressMenuItem:0.3.2'
+  compile 'com.github.hotchemi:ProgressMenuItem:0.3.3'
 }
 ```
 
 ## ChangeLog
 
+- 2014/07/03 0.3.3 release.
 - 2014/06/22 0.3.2 release.
 - 2014/05/25 0.3.1 release.
 - 2014/05/18 0.3.0 release.
