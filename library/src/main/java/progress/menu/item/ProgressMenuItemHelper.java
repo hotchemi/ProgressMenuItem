@@ -5,7 +5,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import java.lang.ref.Reference;
-import java.lang.ref.SoftReference;
+import java.lang.ref.WeakReference;
 
 public class ProgressMenuItemHelper {
 
@@ -25,7 +25,7 @@ public class ProgressMenuItemHelper {
     }
 
     public ProgressMenuItemHelper(MenuItem menuItem) {
-        menuItemReference = new SoftReference<MenuItem>(menuItem);
+        menuItemReference = new WeakReference<MenuItem>(menuItem);
     }
 
     public ProgressMenuItemHelper(MenuItem menuItem, int progressSize) {
