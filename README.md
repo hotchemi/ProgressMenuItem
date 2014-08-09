@@ -17,18 +17,7 @@ dependencies {
 }
 ```
 
-## ChangeLog
-
-- 2014/07/03 0.3.3 release.
-- 2014/06/22 0.3.2 release.
-- 2014/05/25 0.3.1 release.
-- 2014/05/18 0.3.0 release.
-- 2014/05/11 0.2.0 release.
-- 2014/05/04 0.1.0 release.
-
 ## How to use
-
-ProgressMenuItem's usage is very simple.
 
 ### Initialize
 
@@ -108,6 +97,19 @@ But ProgressMenuItem has some merits:
 
 - Supports Android 2.1 or greater.
 - ProgressMenuItem's Interface is more simple.
+
+## ChangeLog
+
+- 2014/07/03 0.3.3 release.
+- 2014/06/22 0.3.2 release.
+- 2014/05/25 0.3.1 release.
+- 2014/05/18 0.3.0 release.
+- 2014/05/11 0.2.0 release.
+- 2014/05/04 0.1.0 release.
+
+## Used
+
+- [Fril](https://play.google.com/store/apps/details?id=jp.co.fablic.fril)
 
 ## Licence
 
