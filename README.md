@@ -3,6 +3,8 @@ ProgressMenuItem
 
 [![Build Status](https://travis-ci.org/hotchemi/ProgressMenuItem.png?branch=master)](https://travis-ci.org/hotchemi/ProgressMenuItem)
 
+[![Android Arsenal](http://img.shields.io/badge/Android%20Arsenal-ProgressMenuItem-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/845)
+
 Helper library about Showing and stopping a progress in the ActionBar.
 
 ![gif](http://gifzo.net/BO3wY1zTTkb.gif)
