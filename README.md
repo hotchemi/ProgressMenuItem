@@ -21,6 +21,8 @@ dependencies {
 
 ## How to use
 
+Javadoc is [here](http://www.javadoc.io/doc/com.github.hotchemi/ProgressMenuItem/0.3.3).
+
 ### Initialize
 
 Simple in your Activity or Fragment's `onCreateOptionsMenu` method instantiate it.
