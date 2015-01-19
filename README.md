@@ -9,6 +9,7 @@ Helper library about Showing and stopping a progress in the ActionBar.
 ![gif](http://gifzo.net/BO3wY1zTTkb.gif)
 
 ## Download
+
 ![Maven Badges](https://maven-badges.herokuapp.com/maven-central/com.github.hotchemi/ProgressMenuItem/badge.svg)
 
 Download from maven central.
@@ -21,7 +22,7 @@ dependencies {
 
 ## How to use
 
-Javadoc is [here](http://www.javadoc.io/doc/com.github.hotchemi/ProgressMenuItem/0.3.3).
+[![javadoc.io](https://javadocio-badges.herokuapp.com/com.github.hotchemi/ProgressMenuItem/badge.svg)](http://www.javadoc.io/doc/com.github.hotchemi/ProgressMenuItem/)
 
 ### Initialize
 
