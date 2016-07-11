@@ -13,7 +13,7 @@ public class ProgressMenuItemHelper {
 
     private int resourceId = R.layout.menu_item_progress;
 
-    protected ProgressMenuItemHelper() {
+    private ProgressMenuItemHelper() {
     }
 
     public ProgressMenuItemHelper(Menu menu, int resourceId) {
@@ -30,8 +30,9 @@ public class ProgressMenuItemHelper {
 
     public ProgressMenuItemHelper(MenuItem menuItem, int progressSize) {
         this(menuItem);
-        if (progressSize == ProgressMenuItemSize.LARGE)
+        if (progressSize == ProgressMenuItemSize.LARGE) {
             resourceId = R.layout.menu_item_progress_large;
+        }
     }
 
     public void setResourceId(int resourceId) {
@@ -39,13 +40,15 @@ public class ProgressMenuItemHelper {
     }
 
     public void startProgress() {
-        if (ReferenceHelper.isNotNull(menuItemReference))
+        if (ReferenceHelper.isNotNull(menuItemReference)) {
             MenuItemCompat.setActionView(menuItemReference.get(), resourceId);
+        }
     }
 
     public void stopProgress() {
-        if (ReferenceHelper.isNotNull(menuItemReference))
+        if (ReferenceHelper.isNotNull(menuItemReference)) {
             MenuItemCompat.setActionView(menuItemReference.get(), null);
+        }
     }
 
 }
