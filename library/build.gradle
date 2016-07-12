@@ -1,17 +1,17 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 24
     buildToolsVersion '21.1.2'
 
     defaultConfig {
-        minSdkVersion 7
-        targetSdkVersion 19
+        minSdkVersion 9
+        targetSdkVersion 24
     }
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:19.1.0'
+    compile "com.android.support:support-v4:24.0.0"
 }
 
-apply from: 'https://raw.github.com/hotchemi/gradle-mvn-push/master/gradle-mvn-push.gradle'
+apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'

@@ -68,8 +68,6 @@ public boolean onCreateOptionsMenu(Menu menu) {
 }
 ```
 
-![gif](http://gifzo.net/BDXqbzDanWc.gif)
-
 ### Override progress
 
 Call `setResourceId(int resId)` and set your custom layout.
